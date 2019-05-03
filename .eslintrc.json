@@ -5,7 +5,10 @@
     },
     "extends": [
         "airbnb",
-        "plugin:prettier/recommended"
+        "plugin:prettier/recommended",
+        "prettier/react",
+        "plugin:react/recommended",
+        "plugin:jsx-a11y/recommended"
     ],
     "globals": {
         "Atomics": "readonly",
@@ -19,8 +22,12 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react", "prettier"
+        "react", "prettier","jsx-a11y"
     ],
     "rules": {
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+        "react/jsx-uses-react": "error",
+        "react/jsx-uses-vars": "error",
+        "jsx-a11y/rule-name": 2
     }
 }
