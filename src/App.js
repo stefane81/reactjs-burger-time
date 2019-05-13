@@ -90,9 +90,19 @@ class App extends Component {
       style.backgroundColor = "red";
     }
 
+    const classes = [];
+
+    if(this.state.persons.length <= 2){
+      classes.push('red');
+    }
+    if(this.state.persons.length <= 1){
+      classes.push('bold');
+    }
+
+
     return (
       <div className="App">
-        <h1>Hi, I am ok.</h1>
+        <p className={classes.join(' ')}>Hi, I am ok.</p>
         <button style={style} onClick={this.togglePersonsHandler}>
           Toggle Persons
         </button>
