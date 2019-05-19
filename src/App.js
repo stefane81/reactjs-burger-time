@@ -61,6 +61,7 @@ class App extends Component {
 
 	render() {
 		let persons = null;
+		let btnClass = '';
 
 		if (this.state.showPersons) {
 			persons = (
@@ -78,6 +79,8 @@ class App extends Component {
 					})}
 				</div>
 			);
+
+			btnClass = styles.red;
 		}
 
 		const classes = [];
@@ -92,7 +95,7 @@ class App extends Component {
 		return (
 			<div className={styles.App}>
 				<p className={classes.join(' ')}>Hi, I am ok.</p>
-				<button className={styles.button} onClick={this.togglePersonsHandler}>
+				<button className={btnClass} onClick={this.togglePersonsHandler}>
 					Toggle Persons
 				</button>
 				{persons}
